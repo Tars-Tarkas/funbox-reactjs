@@ -1,26 +1,56 @@
 @import '../../variable.scss';
 .card{    
-    position: relative;
-    width: rem(328);
-    height: rem(488);
-    background-color: $default-color;
-    border-radius: rem(14);
-    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
-    &__item{
+        position: relative;
+        width: rem(328);
+        height: rem(488);
+        background-color: $default-color;
+        border-radius: rem(14);
+        clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 10%);   
+    &__checked{
+        display: none;
+    }
+    // &__checked::before +.card__content{
+    //     // content: '';
+    //     position: absolute;
+    //     top: rem(4); 
+    //     left: rem(4); 
+    //     width: rem(320); 
+    //     height: rem(480); 
+    //     background: #fff;
+    //     border-radius: rem(11);
+    //     clip-path: polygon(14.7% 0, 100% 0, 100% 100%, 0 100%, 0 9.7%);            
+    // }
+    &__checked:not(checked) +.card__content{
+        content: '';
         position: absolute;
         top: rem(4); 
         left: rem(4); 
         width: rem(320); 
         height: rem(480); 
-        background-color: #fff;
+        background: #fff;
         border-radius: rem(11);
-        clip-path: polygon(14.7% 0, 100% 0, 100% 100%, 0 100%, 0 9.7%);      
+        clip-path: polygon(14.7% 0, 100% 0, 100% 100%, 0 100%, 0 9.7%);            
+    }
+
+    &__content{
+
+        // position: relative;
+        // display: inline-block;
+        cursor: pointer;
+        // border-radius: var(--border-radius);
+        // overflow: hidden;
+        // width: 100%;
+        // height: 100%;   
+        // padding-top: rem(21);
+        // margin-left: rem(48);
     }
     &__img{
-        width: 320px;
-        height: 272px;
         position: absolute;
-        bottom: 0;
-        left: 0;
-    }
+        width: 320px;
+        height: 272px;        
+        bottom: rem(0);
+        left: rem(0);
+        border-radius: rem(12);
+    } 
 }
+

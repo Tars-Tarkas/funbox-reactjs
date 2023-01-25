@@ -10,34 +10,38 @@ const cardItem =[
         "subtitle": "с фуа-гра",
         "description": "10 порций мышь в подарок",
         "weight": "2,0",
-        "img": "img/cat.png"
+        "img": "/images/cat.png",
+        
     },
     {
-        id: 1,
+        id: 2,
         "caption": "Сказочное заморское яство",
         "title": "Нямушка",
         "subtitle": "с фуа-гра",
         "description": "10 порций мышь в подарок",
         "weight": "2,0",
-        "img": "img/cat.png"
+        "img": "/images/cat.png",
+        "disabled": true
     },
     {
-        id: 1,
+        id: 3,
         "caption": "Сказочное заморское яство",
         "title": "Нямушка",
         "subtitle": "с фуа-гра",
         "description": "10 порций мышь в подарок",
         "weight": "2,0",
-        "img": "img/cat.png"
+        "img": "/images/cat.png",
+        "disabled": true
     },
     {
-        id: 1,
+        id: 4,
         "caption": "Сказочное заморское яство",
         "title": "Нямушка",
         "subtitle": "с фуа-гра",
         "description": "10 порций мышь в подарок",
         "weight": "2,0",
-        "img": "img/cat.png"
+        "img": "/images/cat.png",
+        "disabled": true
     }
 ];
 
