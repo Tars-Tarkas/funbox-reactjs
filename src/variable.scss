@@ -1,0 +1,27 @@
+// Function
+@function rem($px) {
+    @return calc($px / 16)+rem;
+}
+
+
+// Main color
+$default-color: #1698D9;
+$hover-color: #2EA8E6;
+$selected-color: #D91667;
+$selected-hover-color: #E52E7A;
+
+// Mixin
+@mixin breakpoint($point) {
+    @if $point == lg{
+        @media (min-width: 1120px) and (max-width: 1439px){@content;}
+    }
+    @else if $point == md{
+        @media (min-width: 768px) and (max-width: 1119px){@content;}
+    }
+    @else if $point == sm{
+        @media (min-width: 320px) and (max-width: 767px){@content;}
+    }  
+    @else if $point == xs{
+        @media (max-width: 320px){@content;}
+    }         
+  }

@@ -1,0 +1,26 @@
+@import '../../variable.scss';
+.card{    
+    position: relative;
+    width: rem(328);
+    height: rem(488);
+    background-color: $default-color;
+    border-radius: rem(14);
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
+    &__item{
+        position: absolute;
+        top: rem(4); 
+        left: rem(4); 
+        width: rem(320); 
+        height: rem(480); 
+        background-color: #fff;
+        border-radius: rem(11);
+        clip-path: polygon(14.7% 0, 100% 0, 100% 100%, 0 100%, 0 9.7%);      
+    }
+    &__img{
+        width: 320px;
+        height: 272px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
