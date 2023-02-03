@@ -9,6 +9,10 @@ $default-color: #1698D9;
 $hover-color: #2EA8E6;
 $selected-color: #D91667;
 $selected-hover-color: #E52E7A;
+$disabled-color: #B3B3B3;
+$subtext-color:#666666;
+$text-color: #000000;
+
 
 // Mixin
 @mixin breakpoint($point) {

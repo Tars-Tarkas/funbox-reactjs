@@ -1,27 +1,12 @@
 @import '../../variable.scss';
 .card{    
-        position: relative;
-        width: rem(328);
-        height: rem(488);
-        background-color: $default-color;
-        border-radius: rem(14);
-        clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 10%);   
-    &__checked{
-        display: none;
-    }
-    // &__checked::before +.card__content{
-    //     // content: '';
-    //     position: absolute;
-    //     top: rem(4); 
-    //     left: rem(4); 
-    //     width: rem(320); 
-    //     height: rem(480); 
-    //     background: #fff;
-    //     border-radius: rem(11);
-    //     clip-path: polygon(14.7% 0, 100% 0, 100% 100%, 0 100%, 0 9.7%);            
-    // }
-    &__checked:not(checked) +.card__content{
-        content: '';
+    position: relative;
+    width: rem(328);
+    height: rem(488);
+    background-color: $default-color;
+    border-radius: rem(14);
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 10%);  
+    &__content{   
         position: absolute;
         top: rem(4); 
         left: rem(4); 
@@ -29,28 +14,119 @@
         height: rem(480); 
         background: #fff;
         border-radius: rem(11);
-        clip-path: polygon(14.7% 0, 100% 0, 100% 100%, 0 100%, 0 9.7%);            
-    }
-
-    &__content{
-
-        // position: relative;
-        // display: inline-block;
+        clip-path: polygon(14.7% 0, 100% 0, 100% 100%, 0 100%, 0 9.7%); 
         cursor: pointer;
-        // border-radius: var(--border-radius);
-        // overflow: hidden;
-        // width: 100%;
-        // height: 100%;   
-        // padding-top: rem(21);
-        // margin-left: rem(48);
+        &__block{
+            position: relative;
+            width: 100%;
+            padding-left: rem(47);
+            padding-top: rem(21);
+        }
     }
     &__img{
         position: absolute;
         width: 320px;
         height: 272px;        
-        bottom: rem(0);
+        bottom: rem(-324);
         left: rem(0);
         border-radius: rem(12);
-    } 
+    }
+    &__caption{        
+        font-family: 'Trebuchet MS';
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(16);
+        line-height: rem(19);
+        color: $subtext-color;
+        display: block;
+    }
+    &__title{
+        font-family: 'Trebuchet MS';
+        font-style: normal;
+        font-weight: 700;
+        font-size: rem(48);
+        line-height: rem(56);
+        color: $text-color;
+        display: block;
+    }
+    &__subtitle{
+        font-family: 'Trebuchet MS';
+        font-style: normal;
+        font-weight: 700;
+        font-size: rem(24);
+        line-height: rem(28);
+        color: $text-color;
+    }
+    &__descriprion{
+        font-family: 'Trebuchet MS';
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(14);
+        line-height: rem(16);
+        color: $subtext-color;
+        width: rem(106);
+    }
+    &__weight{
+        z-index: 2;
+        right: rem(60);
+        bottom: rem(-310);
+        position: absolute;
+        width: rem(80);
+        height: rem(80);
+        border-radius: 50%;
+        background-color: $default-color;
+        color: #fff;
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-family: 'Trebuchet MS';
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(42);
+        line-height: rem(40);       
+    }
+    &__unit{
+        font-family: 'Trebuchet MS';
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(21);
+        line-height: rem(22);
+    }
+}
+.card:hover{
+    background-color: $hover-color;  
+}
+
+.card__disabled{
+    position: absolute;
+    top: rem(4); 
+    left: rem(4); 
+    width: rem(320); 
+    height: rem(480);     
+    border-radius: rem(11);
+    clip-path: polygon(14.7% 0, 100% 0, 100% 100%, 0 100%, 0 9.7%); 
+    cursor: pointer;
+    background-color: $disabled-color;
+    >img{
+        opacity: 0.5;
+    }
+    >label{
+        opacity: 0.5;
+    }
+}
+
+.card__checked{
+    position: relative;
+    width: rem(328);
+    height: rem(488);   
+    border-radius: rem(14);
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 10%);   
+    background-color: #D91667;
+    transform: translateY(rem(5))
+}
+.card__checked:hover{
+    background-color: $selected-hover-color
 }
 
