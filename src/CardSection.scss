@@ -1,13 +1,15 @@
 @import './variable.scss';
 .container{    
-    width: rem(1280);
+    max-width: rem(1280);
     margin: 0 auto;
-    padding-left: rem(15);
-    padding-right: rem(15); 
+    padding-left: rem(10);
+    padding-right: rem(10); 
 }
 
 .card{
     &__block{
+        padding-top: rem(50);
+        height: 100%;
         background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 5e-05) 49.88%, rgba(0, 0, 0, 0.5) 100%), url('../public/images/Pattern.png');
         background-repeat: repeat;
         
@@ -16,6 +18,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
+        row-gap: rem(50);
     }
     
 }

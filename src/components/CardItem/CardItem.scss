@@ -5,7 +5,7 @@
     height: rem(488);
     background-color: $default-color;
     border-radius: rem(14);
-    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 10%);  
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 10%);    
     &__content{   
         position: absolute;
         top: rem(4); 
@@ -27,7 +27,7 @@
         position: absolute;
         width: 320px;
         height: 272px;        
-        bottom: rem(-324);
+        bottom: 0;
         left: rem(0);
         border-radius: rem(12);
     }
@@ -68,8 +68,8 @@
     }
     &__weight{
         z-index: 2;
-        right: rem(60);
-        bottom: rem(-310);
+        right: rem(15);
+        bottom: rem(10);
         position: absolute;
         width: rem(80);
         height: rem(80);
@@ -95,26 +95,45 @@
         line-height: rem(22);
     }
 }
-.card:hover{
-    background-color: $hover-color;  
-}
 
-.card__disabled{
-    position: absolute;
-    top: rem(4); 
-    left: rem(4); 
-    width: rem(320); 
-    height: rem(480);     
-    border-radius: rem(11);
-    clip-path: polygon(14.7% 0, 100% 0, 100% 100%, 0 100%, 0 9.7%); 
-    cursor: pointer;
+
+.card__disabled { 
+    position: relative;
+    width: rem(328);
+    height: rem(488);
     background-color: $disabled-color;
-    >img{
-        opacity: 0.5;
+    border-radius: rem(14);
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 10%);    
+    &__content{   
+        position: absolute;
+        top: rem(4); 
+        left: rem(4); 
+        width: rem(320); 
+        height: rem(480); 
+        background: #fff;
+        border-radius: rem(11);
+        clip-path: polygon(14.7% 0, 100% 0, 100% 100%, 0 100%, 0 9.7%); 
+        cursor: pointer;    
     }
-    >label{
-        opacity: 0.5;
-    }
+   .card__weight{
+    background-color: $disabled-color;
+   }
+   .card__img{
+    opacity: 0.5;
+   }
+   .card__caption{
+    color: $disabled-color;
+   }
+   .card__title{
+    color: $disabled-color;
+   }
+   .card__subtitle{
+    color: $disabled-color;
+   }
+   .card__descriprion{
+    color: $disabled-color;
+   }
+    
 }
 
 .card__checked{
@@ -123,10 +142,18 @@
     height: rem(488);   
     border-radius: rem(14);
     clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 10%);   
-    background-color: #D91667;
-    transform: translateY(rem(5))
+    background-color: $selected-color;
+    transform: translateY(rem(5));
+    label >span{
+        background-color: $selected-color;
+    }
 }
-.card__checked:hover{
+.card__checked:hover .card__weight{
+    transition: background-color 0.5s;
     background-color: $selected-hover-color
 }
 
+.card:hover .card__weight{
+    transition: background-color 0.5s;
+    background-color: $hover-color;  
+}

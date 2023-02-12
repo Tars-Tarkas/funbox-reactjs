@@ -1,26 +1,39 @@
 import { useState } from "react"
 import "./CardItem.scss"
 
-export default function Card({HandleAddProduct, caption, title, subtitle, description, weight, img, disabled}){
-    const [checked, setChecked]=useState(false)
+export default function Card({item, HandleCheckCard}){
+    const [checked, setChecked]=useState(false);
+    const [checkedItems, setCheckedItems] = useState([]);
+    
+    
 
-    const HandleCheck=(e)=>{
+    const HandleCheck=(e, item)=>{
         e.preventDefault();
-        setChecked(!checked);       
-    }
+        setChecked(!checked);     
+        if (checked){
+            // const addItems = checkedItems.filter(value=>value.id === item.id)
+            setCheckedItems([...checkedItems, item]);  
+            // HandleCheckCard([item])
+        }else{
+            return null
+        }
+        console.log(checkedItems)
+    }  
+    
 
-    return(
-             <div className={checked ? 'card__checked' : 'card'}>
-                <input type="checkbox" id="checkbox" className="card__checkbox"/>
-                <label htmlFor="checkbox" className={disabled ? 'card__disabled' : 'card__content'}  onClick={e=>HandleCheck(e)}>  
+    return( 
+             <div className={item.disabled ? 'card__disabled' : checked ? 'card__checked' : 'card'}>                
+                {/* <input disabled={item.disabled} type="checkbox" id="checkbox" defaultChecked={item.disabled ? false : checked} /> */}
+                <input type="checkbox" id="checkbox" onClick={(e, i)=>HandleCheck(e, item)}/>
+                <label htmlFor="checkbox" className='card__content' >  
                     <div className="card__content__block">
-                        <span className="card__caption">{caption}</span>
-                        <span className="card__title">{title}</span>
-                        <span className="card__subtitle">{subtitle}</span>
-                        <p className="card__descriprion">{description}</p>
-                        <span className="card__weight">{weight} <span className="card__unit">кг</span> </span>
-                        <img className="card__img" src={img} alt="Cat" />                    
+                        <span className="card__caption">{item.caption}</span>
+                        <span className="card__title">{item.title}</span>
+                        <span className="card__subtitle">{item.subtitle}</span>
+                        <p className="card__descriprion">{item.description}</p>                                         
                     </div>
+                    <span className="card__weight">{item.weight} <span className="card__unit">кг</span> </span>
+                    <img className="card__img" src={item.img} alt="Cat" /> 
                 </label>
             </div>       
            
