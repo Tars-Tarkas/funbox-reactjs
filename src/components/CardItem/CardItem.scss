@@ -144,16 +144,18 @@
     clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 10%);   
     background-color: $selected-color;
     transform: translateY(rem(5));
-    label >span{
+    .card__weight{
         background-color: $selected-color;
     }
 }
-.card__checked:hover .card__weight{
+.card__checked:hover .card__weight,
+.card__checked:hover{
     transition: background-color 0.5s;
     background-color: $selected-hover-color
 }
 
-.card:hover .card__weight{
+.card:hover .card__weight,
+.card:hover{
     transition: background-color 0.5s;
-    background-color: $hover-color;  
+    background-color: $hover-color  
 }

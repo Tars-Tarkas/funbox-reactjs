@@ -1,31 +1,23 @@
 import { useState } from "react"
 import "./CardItem.scss"
 
-export default function Card({item, HandleCheckCard}){
-    const [checked, setChecked]=useState(false);
-    const [checkedItems, setCheckedItems] = useState([]);
-    
-    
+export default function Card({item, onCheckItem, onUncheckItem}){
+    const [checked, setChecked]=useState(true);       
 
-    const HandleCheck=(e, item)=>{
-        e.preventDefault();
-        setChecked(!checked);     
-        if (checked){
-            // const addItems = checkedItems.filter(value=>value.id === item.id)
-            setCheckedItems([...checkedItems, item]);  
-            // HandleCheckCard([item])
-        }else{
-            return null
-        }
-        console.log(checkedItems)
-    }  
-    
+    const HandleCheck=(item)=>{        
+        setChecked(checked=>!checked);          
+        if(checked & !item.disabled){
+            onCheckItem(item)            
+        } 
+        if(!checked & !item.disabled){
+            onUncheckItem(item)
+        }            
+    }     
 
-    return( 
-             <div className={item.disabled ? 'card__disabled' : checked ? 'card__checked' : 'card'}>                
-                {/* <input disabled={item.disabled} type="checkbox" id="checkbox" defaultChecked={item.disabled ? false : checked} /> */}
-                <input type="checkbox" id="checkbox" onClick={(e, i)=>HandleCheck(e, item)}/>
-                <label htmlFor="checkbox" className='card__content' >  
+
+    return(         
+             <div className={item.disabled ? 'card__disabled' : !checked ? 'card__checked' : 'card'} onClick={()=>HandleCheck(item)}>                                
+                <div className='card__content' >  
                     <div className="card__content__block">
                         <span className="card__caption">{item.caption}</span>
                         <span className="card__title">{item.title}</span>
@@ -34,7 +26,7 @@ export default function Card({item, HandleCheckCard}){
                     </div>
                     <span className="card__weight">{item.weight} <span className="card__unit">кг</span> </span>
                     <img className="card__img" src={item.img} alt="Cat" /> 
-                </label>
+                </div>
             </div>       
            
     )

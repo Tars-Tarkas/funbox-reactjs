@@ -12,7 +12,7 @@ const cardItem=[
         "description": "10 порций мышь в подарок",
         "weight": "0,5",
         "img": "/images/cat.png",        
-        "disabled": false        
+        "disabled": false,
     },
     {
         "id": 2,
@@ -48,13 +48,22 @@ const cardItem=[
 
 export default function CardSection(){   
  
-    // const [checkedItems, setCheckedItems] = useState([]);
+    const [checkedItems, setCheckedItems] = useState([]);
 
-    // const HandleCheck=(item)=>{        
-    //     const addItems = item.filter(value=>value.id === item.id)
-    //     setCheckedItems([...checkedItems, item]);  
-    // }
-    // console.log(checkedItems)
+
+    function handleCheckItem(item) {
+        setCheckedItems((previousState) => {
+          return [...previousState, item];
+        });
+      }
+    
+      function handleUncheckItem(item) {
+        setCheckedItems((previousState) => {
+          return previousState.filter((checkedItem) => {
+            return checkedItem !== item;
+          });
+        });
+      }  
 
     return(
         <div className='card__block'>
@@ -64,8 +73,9 @@ export default function CardSection(){
                         return (                             
                                 <CardItem
                                 key={item.id}
-                                item={item}
-                                // HandleCheckCard={HandleCheck}
+                                item={item}                                
+                                onCheckItem={handleCheckItem}
+                                onUncheckItem={handleUncheckItem}
                                />           
                         )
                     })}
