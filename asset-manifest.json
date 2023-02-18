@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/funbox-reactjs/static/css/main.1c7a8809.css",
-    "main.js": "/funbox-reactjs/static/js/main.b6f12f49.js",
+    "main.js": "/funbox-reactjs/static/js/main.d1e8aaf3.js",
     "static/js/787.51bba8ed.chunk.js": "/funbox-reactjs/static/js/787.51bba8ed.chunk.js",
     "static/media/TrebuchetMS.eot": "/funbox-reactjs/static/media/TrebuchetMS.a39cca2d6c78afd39d8f.eot",
     "static/media/TrebuchetMS.ttf": "/funbox-reactjs/static/media/TrebuchetMS.d69a72044b0a638fd1a5.ttf",
@@ -72,11 +72,11 @@
     "static/media/Exo20-Thin.woff": "/funbox-reactjs/static/media/Exo20-Thin.99a2d5ccf998c10b5568.woff",
     "index.html": "/funbox-reactjs/index.html",
     "main.1c7a8809.css.map": "/funbox-reactjs/static/css/main.1c7a8809.css.map",
-    "main.b6f12f49.js.map": "/funbox-reactjs/static/js/main.b6f12f49.js.map",
+    "main.d1e8aaf3.js.map": "/funbox-reactjs/static/js/main.d1e8aaf3.js.map",
     "787.51bba8ed.chunk.js.map": "/funbox-reactjs/static/js/787.51bba8ed.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1c7a8809.css",
-    "static/js/main.b6f12f49.js"
+    "static/js/main.d1e8aaf3.js"
   ]
 }
