@@ -1,86 +1,143 @@
+import { useState } from "react";
+import "./CardSection.scss";
+import CardItem from "./components/CardItem/CardItem";
 
-import { useState } from 'react';
-import './CardSection.scss';
-import CardItem from './components/CardItem/CardItem';
-
-const cardItem=[
-    {
-        "id": 1,
-        "caption": "Сказочное заморское яство",
-        "title": "Нямушка",
-        "subtitle": "с фуа-гра",
-        "description": "10 порций мышь в подарок",
-        "weight": "0,5",
-        "img": "/images/cat.png",        
-        "disabled": false,
-    },
-    {
-        "id": 2,
-        "caption": "Сказочное заморское яство",
-        "title": "Нямушка",
-        "subtitle": "с фуа-гра",
-        "description": "20 порций мышь в подарок",
-        "weight": "2,0",
-        "img": "/images/cat.png",
-        "disabled": false
-    },
-    {
-        "id": 3,
-        "caption": "Сказочное заморское яство",
-        "title": "Нямушка",
-        "subtitle": "с фуа-гра",
-        "description": "30 порций мышь в подарок",
-        "weight": "2,0",
-        "img": "/images/cat.png",
-        "disabled": true
-    },
-    {
-        "id": 4,
-        "caption": "Сказочное заморское яство",
-        "title": "Нямушка",
-        "subtitle": "с фуа-гра",
-        "description": "10 порций мышь в подарок",
-        "weight": "2,0",
-        "img": "/images/cat.png",
-        "disabled": true
-    }
+const cardItem = [
+  {
+    id: 1,
+    caption: "Сказочное заморское яство",
+    title: "Нямушка",
+    subtitle: "с фуа-гра",
+    gift: "мышь в подарок",
+    gift_count: 0,
+    portions: 10,
+    weight: "0,5",
+    img: "/images/cat.png",
+    selected_text: "Печень утки разварная с артишоками.",
+    disabled: false,
+  },
+  {
+    id: 2,
+    caption: "Сказочное заморское яство",
+    title: "Нямушка",
+    subtitle: "с рыбой",
+    gift: "мышь в подарок",
+    gift_count: 2,
+    portions: 40,
+    weight: "2,0",
+    img: "/images/cat.png",
+    selected_text: "Головы щучьи с чесноком да свежайшая сёмгушка.",
+    disabled: false,
+  },
+  {
+    id: 3,
+    caption: "Сказочное заморское яство",
+    title: "Нямушка",
+    subtitle: "с курой",
+    gift: "мышь в подарок заказчик доволен",
+    gift_count: 5,
+    portions: 100,
+    weight: "5",
+    img: "/images/cat.png",
+    selected_text: "Филе из цыплят с трюфелями в бульоне.",
+    disabled: true,
+  },
+  {
+    id: 4,
+    caption: "Сказочное заморское яство",
+    title: "Нямушка",
+    subtitle: "с фуа-гра",
+    gift: "мышь в подарок заказчик доволен",
+    gift_count: 5,
+    portions: 100,
+    weight: "2,0",
+    img: "/images/cat.png",
+    disabled: true,
+  },
+  {
+    id: 5,
+    caption: "Сказочное заморское яство",
+    title: "Нямушка",
+    subtitle: "с фуа-гра",
+    gift: "мышь в подарок",
+    gift_count: 0,
+    portions: 10,
+    weight: "0,5",
+    img: "/images/cat.png",
+    selected_text: "Печень утки разварная с артишоками.",
+    disabled: false,
+  },
+  {
+    id: 6,
+    caption: "Сказочное заморское яство",
+    title: "Нямушка",
+    subtitle: "с рыбой",
+    gift: "мышь в подарок",
+    gift_count: 2,
+    portions: 40,
+    weight: "2,0",
+    img: "/images/cat.png",
+    selected_text: "Головы щучьи с чесноком да свежайшая сёмгушка.",
+    disabled: false,
+  },
+  {
+    id: 7,
+    caption: "Сказочное заморское яство",
+    title: "Нямушка",
+    subtitle: "с курой",
+    gift: "мышь в подарок заказчик доволен",
+    gift_count: 5,
+    portions: 100,
+    weight: "5",
+    img: "/images/cat.png",
+    selected_text: "Филе из цыплят с трюфелями в бульоне.",
+    disabled: true,
+  },
+  {
+    id: 8,
+    caption: "Сказочное заморское яство",
+    title: "Нямушка",
+    subtitle: "с фуа-гра",
+    description: "10 порций мышь в подарок",
+    weight: "2,0",
+    img: "/images/cat.png",
+    disabled: true,
+  },
 ];
 
-export default function CardSection(){   
- 
-    const [checkedItems, setCheckedItems] = useState([]);
+export default function CardSection() {
+  const [checkedItems, setCheckedItems] = useState([]);
 
+  function handleCheckItem(item) {
+    setCheckedItems((previousState) => {
+      return [...previousState, item];
+    });
+  }
 
-    function handleCheckItem(item) {
-        setCheckedItems((previousState) => {
-          return [...previousState, item];
-        });
-      }
-    
-      function handleUncheckItem(item) {
-        setCheckedItems((previousState) => {
-          return previousState.filter((checkedItem) => {
-            return checkedItem !== item;
-          });
-        });
-      }  
-
-    return(
-        <div className='card__block'>
-            <div className='container'>
-                <div className='card__inner'>            
-                    {cardItem.map((item)=>{
-                        return (                             
-                                <CardItem
-                                key={item.id}
-                                item={item}                                
-                                onCheckItem={handleCheckItem}
-                                onUncheckItem={handleUncheckItem}
-                               />           
-                        )
-                    })}
-                </div>        
-            </div>
+  function handleUncheckItem(item) {
+    setCheckedItems((previousState) => {
+      return previousState.filter((checkedItem) => {
+        return checkedItem !== item;
+      });
+    });
+  }
+  return (
+    <div className="card__section">
+      <div className="container">
+        <span className="card__section__title">Ты сегодня покормил кота?</span>
+        <div className="card__inner">
+          {cardItem.map((item) => {
+            return (
+              <CardItem
+                key={item.id}
+                item={item}
+                onCheckItem={handleCheckItem}
+                onUncheckItem={handleUncheckItem}
+              />
+            );
+          })}
         </div>
-    )
+      </div>
+    </div>
+  );
 }

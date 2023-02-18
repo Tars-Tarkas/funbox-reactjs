@@ -1,22 +1,32 @@
-@import './fonts.scss';
+@import-normalize;
+@import "./fonts.scss";
 body {
   margin: 0;
-  font-family:  Trebuchet MS, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: Trebuchet MS, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
-  height: 100%;
+
   box-sizing: border-box;
+  min-height: 100%;
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 5e-5) 49.88%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    url("../public/images/Pattern.png");
+  background-repeat: repeat;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace, Trebuchet MS;
 }
 
-p{
+p {
   padding: 0;
   margin: 0;
 }

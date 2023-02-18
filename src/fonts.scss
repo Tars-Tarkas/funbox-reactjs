@@ -1,44 +1,260 @@
 @font-face {
-    font-family: 'Trebuchet MS';
-    src: url('../public/fonts/Trebuchet-BoldItalic.eot');
-    src: local('../public/Trebuchet MS Bold Italic'), local('Trebuchet-BoldItalic'),
-        url('../public/fonts/Trebuchet-BoldItalic.eot?#iefix') format('embedded-opentype'),
-        url('../public/fonts/Trebuchet-BoldItalic.woff') format('woff'),
-        url('../public/fonts/Trebuchet-BoldItalic.ttf') format('truetype');
-    font-weight: bold;
-    font-style: italic;
+  font-family: "Trebuchet MS";
+  src: url("../public/fonts/Trebuchet-BoldItalic.eot");
+  src: local("../public/Trebuchet MS Bold Italic"),
+    local("Trebuchet-BoldItalic"),
+    url("../public/fonts/Trebuchet-BoldItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/Trebuchet-BoldItalic.woff") format("woff"),
+    url("../public/fonts/Trebuchet-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
 }
 
 @font-face {
-    font-family: 'Trebuchet MS';
-    src: url('../public/fonts/TrebuchetMS-Bold.eot');
-    src: local('./fonts/Trebuchet MS Bold'), local('TrebuchetMS-Bold'),
-        url('../public/fonts/TrebuchetMS-Bold.eot?#iefix') format('embedded-opentype'),
-        url('../public/fonts/TrebuchetMS-Bold.woff') format('woff'),
-        url('../public/fonts/TrebuchetMS-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
+  font-family: "Trebuchet MS";
+  src: url("../public/fonts/TrebuchetMS-Bold.eot");
+  src: local("./fonts/Trebuchet MS Bold"), local("TrebuchetMS-Bold"),
+    url("../public/fonts/TrebuchetMS-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/TrebuchetMS-Bold.woff") format("woff"),
+    url("../public/fonts/TrebuchetMS-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Trebuchet MS';
-    src: url('../public/fonts/TrebuchetMS-Italic.eot');
-    src: local('../public/fonts/Trebuchet MS Italic'), local('TrebuchetMS-Italic'),
-        url('../public/fonts/TrebuchetMS-Italic.eot?#iefix') format('embedded-opentype'),
-        url('../public/fonts/TrebuchetMS-Italic.woff') format('woff'),
-        url('../public/fonts/TrebuchetMS-Italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
+  font-family: "Trebuchet MS";
+  src: url("../public/fonts/TrebuchetMS-Italic.eot");
+  src: local("../public/fonts/Trebuchet MS Italic"), local("TrebuchetMS-Italic"),
+    url("../public/fonts/TrebuchetMS-Italic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/TrebuchetMS-Italic.woff") format("woff"),
+    url("../public/fonts/TrebuchetMS-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
 }
 
 @font-face {
-    font-family: 'Trebuchet MS';
-    src: url('../public/fonts/TrebuchetMS.eot');
-    src: local('../public/fonts/Trebuchet MS'), local('TrebuchetMS'),
-        url('../public/fonts/TrebuchetMS.eot?#iefix') format('embedded-opentype'),
-        url('../public/fonts/TrebuchetMS.woff') format('woff'),
-        url('../public/fonts/TrebuchetMS.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Trebuchet MS";
+  src: url("../public/fonts/TrebuchetMS.eot");
+  src: local("../public/fonts/Trebuchet MS"), local("TrebuchetMS"),
+    url("../public/fonts/TrebuchetMS.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/TrebuchetMS.woff") format("woff"),
+    url("../public/fonts/TrebuchetMS.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: "Exo 2.0";
+  src: url("../public/fonts/Exo20-Regular.eot");
+  src: local("../public/fonts/Exo 2.0 Regular"), local("Exo2.0-Regular"),
+    url("../public/fonts/Exo20-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/Exo20-Regular.woff") format("woff"),
+    url("../public/fonts/Exo20-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo 2.0";
+  src: url("../public/fonts/Exo20-LightItalic.eot");
+  src: local("../public/fonts/Exo 2.0 Light Italic"),
+    local("Exo2.0-LightItalic"),
+    url("../public/fonts/Exo20-LightItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/Exo20-LightItalic.woff") format("woff"),
+    url("../public/fonts/Exo20-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo 2.0";
+  src: url("../public/fonts/Exo20-Medium.eot");
+  src: local("../public/fonts/Exo 2.0 Medium"), local("Exo2.0-Medium"),
+    url("../public/fonts/Exo20-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/Exo20-Medium.woff") format("woff"),
+    url("../public/fonts/Exo20-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo 2.0";
+  src: url("../public/fonts/Exo20-Thin.eot");
+  src: local("../public/fonts/Exo 2.0 Thin"), local("Exo2.0-Thin"),
+    url("../public/fonts/Exo20-Thin.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/Exo20-Thin.woff") format("woff"),
+    url("../public/fonts/Exo20-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo 2.0 Extra";
+  src: url("../public/fonts/Exo20-ExtraLight.eot");
+  src: local("../public/fonts/Exo 2.0 Extra Light"), local("Exo2.0-ExtraLight"),
+    url("../public/fonts/Exo20-ExtraLight.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/Exo20-ExtraLight.woff") format("woff"),
+    url("../public/fonts/Exo20-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo 2.0";
+  src: url("../public/fonts/Exo20-ThinItalic.eot");
+  src: local("../public/fonts/Exo 2.0 Thin Italic"), local("Exo2.0-ThinItalic"),
+    url("../public/fonts/Exo20-ThinItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/Exo20-ThinItalic.woff") format("woff"),
+    url("../public/fonts/Exo20-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo 2.0";
+  src: url("../public/fonts/Exo20-MediumItalic.eot");
+  src: local("../public/fonts/Exo 2.0 Medium Italic"),
+    local("Exo2.0-MediumItalic"),
+    url("../public/fonts/Exo20-MediumItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/Exo20-MediumItalic.woff") format("woff"),
+    url("../public/fonts/Exo20-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo 2.0 Extra";
+  src: url("../public/fonts/Exo20-ExtraBoldItalic.eot");
+  src: local("../public/fonts/Exo 2.0 Extra Bold Italic"),
+    local("Exo2.0-ExtraBoldItalic"),
+    url("../public/fonts/Exo20-ExtraBoldItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/Exo20-ExtraBoldItalic.woff") format("woff"),
+    url("../public/fonts/Exo20-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo 2.0 Extra";
+  src: url("../public/fonts/Exo20-ExtraLightItalic.eot");
+  src: local("../public/fonts/Exo 2.0 Extra Light Italic"),
+    local("Exo2.0-ExtraLightItalic"),
+    url("../public/fonts/Exo20-ExtraLightItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/Exo20-ExtraLightItalic.woff") format("woff"),
+    url("../public/fonts/Exo20-ExtraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo 2.0";
+  src: url("../public/fonts/Exo20-Bold.eot");
+  src: local("../public/fonts/Exo 2.0 Bold"), local("Exo2.0-Bold"),
+    url("../public/fonts/Exo20-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/Exo20-Bold.woff") format("woff"),
+    url("../public/fonts/Exo20-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo 2.0";
+  src: url("../public/fonts/Exo20-BoldItalic.eot");
+  src: local("../public/fonts/Exo 2.0 Bold Italic"), local("Exo2.0-BoldItalic"),
+    url("../public/fonts/Exo20-BoldItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/Exo20-BoldItalic.woff") format("woff"),
+    url("../public/fonts/Exo20-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo 2.0";
+  src: url("../public/fonts/Exo20-Italic.eot");
+  src: local("../public/fonts/Exo 2.0 Italic"), local("Exo2.0-Italic"),
+    url("../public/fonts/Exo20-Italic.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/Exo20-Italic.woff") format("woff"),
+    url("../public/fonts/Exo20-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo 2.0";
+  src: url("../public/fonts/Exo20-BlackItalic.eot");
+  src: local("Exo 2.0 Black Italic"), local("Exo2.0-BlackItalic"),
+    url("../public/fonts/Exo20-BlackItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/Exo20-BlackItalic.woff") format("woff"),
+    url("../public/fonts/Exo20-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo 2.0 Semi";
+  src: url("../public/fonts/Exo20-SemiBold.eot");
+  src: local("../public/fonts/Exo 2.0 Semi Bold"), local("Exo2.0-SemiBold"),
+    url("../public/fonts/Exo20-SemiBold.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/Exo20-SemiBold.woff") format("woff"),
+    url("../public/fonts/Exo20-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo 2.0";
+  src: url("../public/fonts/Exo20-Light.eot");
+  src: local("../public/fonts/Exo 2.0 Light"), local("Exo2.0-Light"),
+    url("../public/fonts/Exo20-Light.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/Exo20-Light.woff") format("woff"),
+    url("../public/fonts/Exo20-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo 2.0";
+  src: url("../public/fonts/Exo20-Black.eot");
+  src: local("../public/fonts/Exo 2.0 Black"), local("Exo2.0-Black"),
+    url("../public/fonts/Exo20-Black.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/Exo20-Black.woff") format("woff"),
+    url("../public/fonts/Exo20-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo 2.0 Semi";
+  src: url("../public/fonts/Exo20-SemiBoldItalic.eot");
+  src: local("../public/fonts/Exo 2.0 Semi Bold Italic"),
+    local("Exo2.0-SemiBoldItalic"),
+    url("../public/fonts/Exo20-SemiBoldItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/Exo20-SemiBoldItalic.woff") format("woff"),
+    url("../public/fonts/Exo20-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Exo 2.0 Extra";
+  src: url("../public/fonts/Exo20-ExtraBold.eot");
+  src: local("../public/fonts/Exo 2.0 Extra Bold"), local("Exo2.0-ExtraBold"),
+    url("../public/fonts/Exo20-ExtraBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/Exo20-ExtraBold.woff") format("woff"),
+    url("../public/fonts/Exo20-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}

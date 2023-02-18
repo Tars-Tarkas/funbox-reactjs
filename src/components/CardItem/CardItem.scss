@@ -1,161 +1,225 @@
-@import '../../variable.scss';
-.card{    
+@import "../../variable.scss";
+.card {
+  position: relative;
+  width: rem(320);
+  height: rem(480);
+  background-color: $default-color;
+  border-radius: rem(12);
+  clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%, 0 9%);
+  margin-bottom: rem(14);
+  &__content {
     position: relative;
-    width: rem(328);
-    height: rem(488);
+    top: rem(4);
+    left: rem(4);
+    width: rem(312);
+    height: rem(472);
+    background: #f2f2f2;
+    border-radius: rem(9);
+    clip-path: polygon(12.7% 0, 100% 0, 100% 100%, 0 100%, 0 8.7%);
+    cursor: pointer;
+    &__block {
+      position: relative;
+      width: 100%;
+
+      padding-top: rem(17);
+      > span {
+        display: block;
+      }
+    }
+  }
+  &__img {
+    position: absolute;
+    width: rem(316);
+    height: rem(267);
+    bottom: rem(0);
+    left: rem(-2);
+    border-radius: rem(12);
+  }
+  &__caption {
+    font-family: "Trebuchet MS";
+    font-style: normal;
+    font-weight: 400;
+    font-size: rem(16);
+    color: $subtext-color;
+    display: block;
+    margin-bottom: rem(6);
+    padding-left: rem(47);
+  }
+  &__title {
+    font-family: "Trebuchet MS";
+    font-style: normal;
+    font-weight: 700;
+    font-size: rem(48);
+    padding-left: rem(44);
+    color: $text-color;
+    display: block;
+    margin-bottom: rem(1);
+  }
+  &__subtitle {
+    font-family: "Trebuchet MS";
+    font-style: normal;
+    font-weight: 700;
+    font-size: rem(24);
+
+    color: $text-color;
+    padding-left: rem(47);
+    margin-bottom: rem(14);
+  }
+  &__portions {
+    font-family: "Trebuchet MS";
+    font-style: normal;
+    font-weight: 700;
+    font-size: rem(14);
+
+    color: $subtext-color;
+    padding-left: rem(47);
+    &__text {
+      font-weight: 400;
+    }
+  }
+  &__gift {
+    font-family: "Trebuchet MS";
+    font-style: normal;
+    font-weight: 700;
+    font-size: rem(14);
+    line-height: rem(16);
+    color: $subtext-color;
+    width: rem(126);
+    padding-left: rem(47);
+    &__text {
+      font-weight: 400;
+    }
+  }
+  &__weight {
+    z-index: 2;
+    right: rem(12);
+    bottom: rem(12);
+    position: absolute;
+    width: rem(80);
+    height: rem(80);
+    border-radius: 50%;
     background-color: $default-color;
-    border-radius: rem(14);
-    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 10%);    
-    &__content{   
-        position: absolute;
-        top: rem(4); 
-        left: rem(4); 
-        width: rem(320); 
-        height: rem(480); 
-        background: #fff;
-        border-radius: rem(11);
-        clip-path: polygon(14.7% 0, 100% 0, 100% 100%, 0 100%, 0 9.7%); 
-        cursor: pointer;
-        &__block{
-            position: relative;
-            width: 100%;
-            padding-left: rem(47);
-            padding-top: rem(21);
-        }
-    }
-    &__img{
-        position: absolute;
-        width: 320px;
-        height: 272px;        
-        bottom: 0;
-        left: rem(0);
-        border-radius: rem(12);
-    }
-    &__caption{        
-        font-family: 'Trebuchet MS';
-        font-style: normal;
-        font-weight: 400;
-        font-size: rem(16);
-        line-height: rem(19);
-        color: $subtext-color;
-        display: block;
-    }
-    &__title{
-        font-family: 'Trebuchet MS';
-        font-style: normal;
-        font-weight: 700;
-        font-size: rem(48);
-        line-height: rem(56);
-        color: $text-color;
-        display: block;
-    }
-    &__subtitle{
-        font-family: 'Trebuchet MS';
-        font-style: normal;
-        font-weight: 700;
-        font-size: rem(24);
-        line-height: rem(28);
-        color: $text-color;
-    }
-    &__descriprion{
-        font-family: 'Trebuchet MS';
-        font-style: normal;
-        font-weight: 400;
-        font-size: rem(14);
-        line-height: rem(16);
-        color: $subtext-color;
-        width: rem(106);
-    }
-    &__weight{
-        z-index: 2;
-        right: rem(15);
-        bottom: rem(10);
-        position: absolute;
-        width: rem(80);
-        height: rem(80);
-        border-radius: 50%;
-        background-color: $default-color;
-        color: #fff;
-        display: block;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        font-family: 'Trebuchet MS';
-        font-style: normal;
-        font-weight: 400;
-        font-size: rem(42);
-        line-height: rem(40);       
-    }
-    &__unit{
-        font-family: 'Trebuchet MS';
-        font-style: normal;
-        font-weight: 400;
-        font-size: rem(21);
-        line-height: rem(22);
-    }
-}
-
-
-.card__disabled { 
+    color: #fff;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Trebuchet MS";
+    font-style: normal;
+    font-weight: 400;
+    font-size: rem(42);
+    line-height: rem(40);
+  }
+  &__unit {
+    font-family: "Trebuchet MS";
+    font-style: normal;
+    font-weight: 400;
+    font-size: rem(21);
+    line-height: rem(14);
+  }
+  &__bellow {
     position: relative;
-    width: rem(328);
-    height: rem(488);
-    background-color: $disabled-color;
-    border-radius: rem(14);
-    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 10%);    
-    &__content{   
-        position: absolute;
-        top: rem(4); 
-        left: rem(4); 
-        width: rem(320); 
-        height: rem(480); 
-        background: #fff;
-        border-radius: rem(11);
-        clip-path: polygon(14.7% 0, 100% 0, 100% 100%, 0 100%, 0 9.7%); 
-        cursor: pointer;    
+    color: #fff;
+    font-family: "Trebuchet MS";
+    font-style: normal;
+    font-weight: 400;
+    font-size: rem(13);
+    line-height: rem(15);
+    text-align: center;
+    &__pay {
+      font-family: "Trebuchet MS";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 15px;
+      color: #22a7e9;
+      border-bottom: 1px dashed #22a7e9;
+      cursor: pointer;
     }
-   .card__weight{
+    &__disabled {
+      position: relative;
+      font-family: "Trebuchet MS";
+      font-style: normal;
+      font-weight: 400;
+      font-size: rem(13);
+      line-height: rem(15);
+      text-align: center;
+      color: #ffff66;
+    }
+  }
+}
+.card__item:nth-child(3n + 1) {
+  @include breakpoint(md) {
+    margin-right: 250px;
+    margin-left: 250px;
+    column-gap: 0;
+  }
+  @include breakpoint(lg) {
+    column-gap: 50px;
+    // margin: 0;
+  }
+}
+.card__disabled {
+  position: relative;
+  width: rem(320);
+  height: rem(480);
+  background-color: $disabled-color;
+  border-radius: rem(12);
+  clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%, 0 9%);
+  margin-bottom: rem(14);
+  &__content {
+    position: absolute;
+    top: rem(4);
+    left: rem(4);
+    width: rem(312);
+    height: rem(472);
+    background: #f2f2f2;
+    border-radius: rem(9);
+    clip-path: polygon(12.7% 0, 100% 0, 100% 100%, 0 100%, 0 8.7%);
+    cursor: pointer;
+  }
+  .card__weight {
     background-color: $disabled-color;
-   }
-   .card__img{
+  }
+  .card__img {
     opacity: 0.5;
-   }
-   .card__caption{
+  }
+  .card__caption {
     color: $disabled-color;
-   }
-   .card__title{
+  }
+  .card__title {
     color: $disabled-color;
-   }
-   .card__subtitle{
+  }
+  .card__subtitle {
     color: $disabled-color;
-   }
-   .card__descriprion{
+  }
+  .card__descriprion {
     color: $disabled-color;
-   }
-    
+  }
 }
 
-.card__checked{
-    position: relative;
-    width: rem(328);
-    height: rem(488);   
-    border-radius: rem(14);
-    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 10%);   
+.card__checked {
+  position: relative;
+  width: rem(320);
+  height: rem(480);
+  border-radius: rem(12);
+  clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%, 0 9%);
+  background-color: $selected-color;
+  transform: translateY(rem(5));
+  margin-bottom: rem(14);
+  .card__weight {
     background-color: $selected-color;
-    transform: translateY(rem(5));
-    .card__weight{
-        background-color: $selected-color;
-    }
+  }
 }
 .card__checked:hover .card__weight,
-.card__checked:hover{
-    transition: background-color 0.5s;
-    background-color: $selected-hover-color
+.card__checked:hover {
+  transition: background-color 0.5s;
+  background-color: $selected-hover-color;
 }
 
 .card:hover .card__weight,
-.card:hover{
-    transition: background-color 0.5s;
-    background-color: $hover-color  
+.card:hover {
+  transition: background-color 0.5s;
+  background-color: $hover-color;
 }
