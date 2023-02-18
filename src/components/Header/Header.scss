@@ -1,6 +1,5 @@
 @import "../../variable.scss";
-footer {
-  width: 100%;
-  height: 50px;
+.header {
+  height: rem(50);
   background-color: $default-color;
 }

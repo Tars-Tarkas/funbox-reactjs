@@ -48,7 +48,7 @@ export default function Card({ item, onCheckItem, onUncheckItem }) {
             </span>
             <span className="card__gift">
               {item.gift_count ? item.gift_count : null}
-              <span className="card__gift__text">{item.gift}</span>
+              <span className="card__gift__text">&nbsp;{item.gift}</span>
             </span>
           </div>
           <span className="card__weight">
