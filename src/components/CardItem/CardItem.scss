@@ -44,6 +44,11 @@
     display: block;
     margin-bottom: rem(6);
     padding-left: rem(47);
+    &__hover {
+      margin-bottom: rem(6);
+      padding-left: rem(47);
+      color: $selected-hover-color;
+    }
   }
   &__title {
     font-family: "Trebuchet MS";
@@ -136,6 +141,11 @@
       color: #22a7e9;
       border-bottom: 1px dashed #22a7e9;
       cursor: pointer;
+      transition: all 0.3s;
+    }
+    &__pay:hover {
+      font-weight: 500;
+      transition: all 1;
     }
     &__disabled {
       position: relative;
@@ -149,17 +159,7 @@
     }
   }
 }
-.card__item:nth-child(3n + 1) {
-  @include breakpoint(md) {
-    margin-right: 250px;
-    margin-left: 250px;
-    column-gap: 0;
-  }
-  @include breakpoint(lg) {
-    column-gap: 50px;
-    // margin: 0;
-  }
-}
+
 .card__disabled {
   position: relative;
   width: rem(320);
@@ -197,6 +197,15 @@
   .card__descriprion {
     color: $disabled-color;
   }
+  .card__portions {
+    color: $disabled-color;
+  }
+  .card__gift__text {
+    color: $disabled-color;
+  }
+  .card__gift {
+    color: $disabled-color;
+  }
 }
 
 .card__checked {
@@ -206,7 +215,6 @@
   border-radius: rem(12);
   clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%, 0 9%);
   background-color: $selected-color;
-  transform: translateY(rem(5));
   margin-bottom: rem(14);
   .card__weight {
     background-color: $selected-color;

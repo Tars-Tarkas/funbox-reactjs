@@ -1,16 +1,28 @@
+import * as React from "react";
 import { useState } from "react";
 import "./CardItem.scss";
+import { ICardItem } from "../../types/types";
 
-export default function Card({ item, onCheckItem, onUncheckItem }) {
+interface ICard {
+  item: ICardItem;
+  onCheckItem: (item: any) => void;
+  onUncheckItem: (item: any) => void;
+}
+
+const Card: React.FC<ICard> = (props): JSX.Element => {
+  const { item, onCheckItem, onUncheckItem } = props;
   const [checked, setChecked] = useState(true);
+  const [mouseEnter, setMouseEnter] = useState(false);
 
-  const HandleCheck = (item) => {
+  const HandleCheck = (item: ICardItem) => {
     setChecked((checked) => !checked);
-    if (checked & !item.disabled) {
+    if (checked && !item.disabled) {
       onCheckItem(item);
+      setMouseEnter(true);
     }
-    if (!checked & !item.disabled) {
+    if (!checked && !item.disabled) {
       onUncheckItem(item);
+      setMouseEnter(false);
     }
   };
 
@@ -29,6 +41,14 @@ export default function Card({ item, onCheckItem, onUncheckItem }) {
     </p>
   );
 
+  const mouseIn = () => {
+    return !checked ? setMouseEnter(true) : setMouseEnter(false);
+  };
+  const mouseOut = () => {
+    return checked ? setMouseEnter(true) : setMouseEnter(false);
+  };
+  console.log(mouseEnter);
+
   return (
     <div className="card__item">
       <div
@@ -36,10 +56,16 @@ export default function Card({ item, onCheckItem, onUncheckItem }) {
           item.disabled ? "card__disabled" : !checked ? "card__checked" : "card"
         }
         onClick={() => HandleCheck(item)}
+        onMouseEnter={() => setMouseEnter(true)}
+        onMouseLeave={() => setMouseEnter(false)}
       >
         <div className="card__content">
           <div className="card__content__block">
-            <span className="card__caption">{item.caption}</span>
+            <span
+              className={checked ? "card__caption__hover" : "card__caption"}
+            >
+              {!mouseEnter ? "Котэ не одобряет?" : item.caption}
+            </span>
             <span className="card__title">{item.title}</span>
             <span className="card__subtitle">{item.subtitle}</span>
             <span className="card__portions">
@@ -54,10 +80,16 @@ export default function Card({ item, onCheckItem, onUncheckItem }) {
           <span className="card__weight">
             {item.weight} <span className="card__unit">кг</span>{" "}
           </span>
-          <img className="card__img" src={item.img} alt="Cat" />
+          <img
+            className="card__img"
+            src={process.env.PUBLIC_URL + item.img}
+            alt="Cat"
+          />
         </div>
       </div>
       {textBellow}
     </div>
   );
-}
+};
+
+export default Card;

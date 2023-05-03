@@ -1,4 +1,4 @@
-@import "./variable.scss";
+@import "../../variable.scss";
 .container {
   max-width: rem(1280);
   margin: 0 auto;
@@ -15,12 +15,12 @@
         rgba(0, 0, 0, 5e-5) 49.88%,
         rgba(0, 0, 0, 0.5) 100%
       ),
-      url("../public/images/Pattern.png");
+      url("../../../public/images/Pattern.png");
     background-repeat: repeat;
     max-height: 100%;
     padding-bottom: rem(50);
     &__title {
-      font-family: "Exo 2.0";
+      font-family: "Exo 2";
       font-weight: 200;
       font-size: rem(36);
       line-height: rem(44);
