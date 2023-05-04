@@ -42,12 +42,12 @@ const Card: React.FC<ICard> = (props): JSX.Element => {
   );
 
   const mouseIn = () => {
-    return !checked ? setMouseEnter(true) : setMouseEnter(false);
+    setMouseEnter(true);
   };
+
   const mouseOut = () => {
-    return checked ? setMouseEnter(true) : setMouseEnter(false);
+    setMouseEnter(false);
   };
-  console.log(mouseEnter);
 
   return (
     <div className="card__item">
@@ -56,15 +56,25 @@ const Card: React.FC<ICard> = (props): JSX.Element => {
           item.disabled ? "card__disabled" : !checked ? "card__checked" : "card"
         }
         onClick={() => HandleCheck(item)}
-        onMouseEnter={() => setMouseEnter(true)}
-        onMouseLeave={() => setMouseEnter(false)}
+        onMouseEnter={mouseIn}
+        onMouseLeave={mouseOut}
       >
         <div className="card__content">
           <div className="card__content__block">
             <span
-              className={checked ? "card__caption__hover" : "card__caption"}
+              className={
+                checked || item.disabled
+                  ? "card__caption"
+                  : mouseEnter && !checked
+                  ? "card__caption__hover"
+                  : "card__caption"
+              }
             >
-              {!mouseEnter ? "Котэ не одобряет?" : item.caption}
+              {checked || item.disabled
+                ? item.caption
+                : mouseEnter && !checked
+                ? "Котэ не одобряет?"
+                : item.caption}
             </span>
             <span className="card__title">{item.title}</span>
             <span className="card__subtitle">{item.subtitle}</span>
@@ -91,5 +101,7 @@ const Card: React.FC<ICard> = (props): JSX.Element => {
     </div>
   );
 };
+
+
 
 export default Card;
